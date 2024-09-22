@@ -43,6 +43,13 @@ main {
     border-right: 2px solid rgb(241, 241, 241);
 }
 
+h1 {
+    font-family: PlayBold;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
 h2 {
     font-family: PlayBold;
     font-size: 1.3em;
@@ -83,11 +90,13 @@ ul {
 /* -------------------  Навигация, header ------------------- */
 
 header {
-    background-color: rgb(245 245 245);
+    /*background-color: rgb(245 245 245);*/
+    background-color: #efeceb;
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 99;
 }
 
 .nav {
@@ -114,6 +123,97 @@ header {
 .nav a:hover {
     border: 1px solid rgb(241, 112, 87);
 }
+
+/* ------------- Секция "Основное" ------------ */
+
+#main-info {
+    /*display: grid;
+    grid-template-areas: "photo info contacts";
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    column-gap: 10px;*/
+    position: relative;
+    margin: 0 0 50px 50px;
+    /*margin-top: 20px;*/
+}
+
+.photo {
+    position: absolute;
+    top: 35px;
+    /*grid-area: photo;*/
+    display: inline-block;
+    padding: 3px 3px 0;
+    border: 3px solid #CAC5C1;
+    z-index: 10;
+}
+
+.photo img {
+    height: 250px;
+}
+
+.info-block {
+    display: grid;
+    grid-template-areas: "text-block contacts";
+    grid-template-columns: 1fr 42%;
+    column-gap: 10px;
+    width: 80%;
+    margin-left: auto;
+    /*border-left: 3px solid rgb(241, 241, 241);*/
+    border-left: 3px solid #CAC5C1;
+    border-bottom: 3px solid #CAC5C1;
+    background-color: #faf8f7;
+}
+
+.text-block {
+    grid-area: text-block;
+    margin-left: 5.8vw;
+    margin-top: 10px;
+    padding: 35px 0;
+}
+
+.text-block ul {
+    margin-top:  5px;
+}
+
+.name {
+    margin-bottom: 20px;
+}
+
+.occupation {
+    margin-bottom: 30px;
+}
+
+.contacts {
+    grid-area: contacts;
+    position: relative;
+    align-self: flex-start;
+    border: 3px solid #CAC5C1;
+    margin-top: 25px;
+    margin-right: 20px;
+    padding: 15px;
+}
+
+.contacts h3 {
+    font-family: PlayBold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    position: absolute;
+    top: -22px;
+    left: 15px;
+    z-index: 3;
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(250, 248, 247);
+}
+
+.contacts li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.contacts ul {
+    margin-bottom: 10px;
+}
+
+/* TODO Добавить иконки соц-сетей */
 
 /* TODO ------------- Секция "О себе" ------------ */
 
@@ -144,5 +244,5 @@ header {
 /* --------------------------  Footer ------------------------ */
 
 footer {
-    background-color: rgb(245 245 245);
+    background-color: #f5f3f2;
 }
