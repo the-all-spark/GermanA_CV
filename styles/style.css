@@ -118,8 +118,28 @@ header {
 /* TODO ------------- Секция "О себе" ------------ */
 
 
-/* TODO ------------- Секция "Хобби" ------------ */
+/* ------------- Секция "Хобби" ------------ */
 
+.hobby-list {
+    display: grid;
+    grid-template-areas: "hobby-left hobby-right";
+    grid-template-columns: 63% 34%;
+    grid-template-rows: 100%;
+    column-gap: 20px;
+}
+
+.hobby-list ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hobby-left-list {
+    grid-area: hobby-left;
+}
+
+.hobby-right-list {
+    grid-area: hobby-right;
+}
 
 /* --------------------------  Footer ------------------------ */
 
