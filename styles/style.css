@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'NotoSerifBold';
+    src: url(../assets/fonts/NotoSerif-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'NotoSerifRegular';
+    src: url(../assets/fonts/NotoSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'PlayBold';
+    src: url(../assets/fonts/Play-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'PlayRegular';
+    src: url(../assets/fonts/Play-Regular.ttf);
+}
+
+/* -------------- Общие ---------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 70%;
+    margin: 0 auto;
+    font-family: NotoSerifRegular;
+    font-size: 16px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+} 
+
+main {
+    flex: 1;
+    border-left: 2px solid rgb(241, 241, 241);
+    border-right: 2px solid rgb(241, 241, 241);
+}
+
+h2 {
+    font-family: PlayBold;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* TODO добавить эффекты ссылок */
+
+/* --------------------------  Секции - общее ------------------------ */
+
+.section-title {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px 0;
+}
+
+section {
+    margin: 0 50px 50px;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: circle;
+}
+
+/* -------------------  Навигация, header ------------------- */
+
+header {
+    background-color: rgb(245 245 245);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    padding: 18px 0;
+    font-family: PlayRegular;
+}
+
+.nav li {
+    display: inline-block;
+    list-style-type: none;
+    border: 1px solid rgb(62, 62, 62);
+    padding: 5px 12px;
+    border-radius: 2px;
+}
+
+/* TODO эффект при наведении на пункт меню */
+
+.nav a {
+    text-decoration: none;
+}
+
+/* TODO ------------- Секция "О себе" ------------ */
+
+
+/* TODO ------------- Секция "Хобби" ------------ */
+
+
+/* --------------------------  Footer ------------------------ */
+
+footer {
+    background-color: rgb(245 245 245);
+}
