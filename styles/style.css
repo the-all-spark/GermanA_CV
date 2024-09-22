@@ -50,7 +50,17 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* TODO добавить эффекты ссылок */
+a:link {
+    color: rgb(62, 62, 62);
+}
+
+a:visited {
+    color:  rgb(130, 88, 82);
+}
+
+a:hover {
+    color:  rgb(241, 112, 87);
+}
 
 /* --------------------------  Секции - общее ------------------------ */
 
@@ -92,7 +102,9 @@ header {
     border-radius: 2px;
 }
 
-/* TODO эффект при наведении на пункт меню */
+.nav li:hover {
+    border: 1px solid rgb(241, 112, 87);
+}
 
 .nav a {
     text-decoration: none;
