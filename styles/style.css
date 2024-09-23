@@ -79,7 +79,7 @@ a:hover {
 
 section {
     margin: 0 50px 50px;
-    scroll-margin-top: 83px;
+    scroll-margin-top: 75px;
     /*text-align: justify;*/
 }
 
@@ -311,6 +311,43 @@ header {
 
 .cartography-exp-text {
     grid-area: cartography-exp-text;
+}
+
+/* ------------- Секция "Навыки" ------------ */
+
+.skills-list {
+    display: grid;
+    grid-template-areas: "hardskills-left softskills-right";
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 100%;
+    column-gap: 20px;
+    width: 90%;
+    margin-top: 25px;
+}
+
+.skills-list ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hardskills-left-list {
+    grid-area: hardskills-left;
+}
+
+.softskills-right-list {
+    grid-area: softskills-right;
+}
+
+.graphic-editors {
+    margin-top: 10px;
+}
+
+.graphic-editors ul {
+    list-style-type: disc;
+}
+
+.skills-list .graphic-editors ul {
+    margin-top: 0;
 }
 
 /* ------------- Секция "Хобби" ------------ */
