@@ -28,7 +28,7 @@ body {
     width: 70%;
     margin: 0 auto;
     font-family: NotoSerifRegular;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .container {
@@ -80,6 +80,7 @@ a:hover {
 section {
     margin: 0 50px 50px;
     scroll-margin-top: 83px;
+    /*text-align: justify;*/
 }
 
 ul {
@@ -216,8 +217,101 @@ header {
 
 /* TODO Добавить иконки соц-сетей */
 
-/* TODO ------------- Секция "О себе" ------------ */
+/* ------------- Секция "О себе" ------------ */
 
+#about-myself ul {
+    padding-left: 40px;
+}
+
+#about-myself li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+/* Опыт работы */
+
+.previous-exp {
+    display: grid;
+    grid-template-areas: "current-exp"
+                        "lecturer-bsu-exp"
+                        "design-exp"
+                        "cartography-exp";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    row-gap: 12px;
+}
+
+.exp-line {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 100%;
+    column-gap: 15px;
+}
+
+.exp-date {
+    text-align: right;
+    font-style: italic;
+    border-right: 1px solid #929292;
+    padding-right: 15px;
+}
+
+/* Текущий опыт работы */
+.current-exp {
+    grid-area: current-exp;
+    grid-template-areas: "current-exp-date current-exp-text";
+}
+
+.current-exp-date {
+    grid-area: current-exp-date;
+}
+
+.current-exp-text {
+    grid-area: current-exp-text;
+}
+
+/* В БГУ */
+
+.lecturer-bsu-exp {
+    grid-area: lecturer-bsu-exp;
+    grid-template-areas: "lecturer-bsu-exp-date lecturer-bsu-exp-text";
+}
+
+.lecturer-bsu-exp-date {
+    grid-area: lecturer-bsu-exp-date;
+}
+
+.lecturer-bsu-exp-text {
+    grid-area: lecturer-bsu-exp-text;
+}
+
+/*В Бюрократе*/
+
+.design-exp {
+    grid-area: design-exp;
+    grid-template-areas: "design-exp-date design-exp-text";
+}
+
+.design-exp-date {
+    grid-area: design-exp-date;
+}
+
+.design-exp-text {
+    grid-area: design-exp-text;
+}
+
+/* В Квадрографе */
+
+.cartography-exp {
+    grid-area: cartography-exp;
+    grid-template-areas: "cartography-exp-date cartography-exp-text";
+}
+
+.cartography-exp-date {
+    grid-area: cartography-exp-date;
+}
+
+.cartography-exp-text {
+    grid-area: cartography-exp-text;
+}
 
 /* ------------- Секция "Хобби" ------------ */
 
@@ -243,6 +337,8 @@ header {
 }
 
 /* --------------------------  Footer ------------------------ */
+
+/* TODO Добавить иконки соц-сетей */
 
 footer {
     background-color: #f5f3f2;
