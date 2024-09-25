@@ -365,6 +365,13 @@ header {
     list-style-type: disc;
 }
 
+/* TODO ------------- Секция "Опыт в области IT" ------------ */
+
+
+
+
+
+
 /* ------------- Секция "Хобби" ------------ */
 
 .hobby-list {
@@ -388,13 +395,89 @@ header {
     grid-area: hobby-right;
 }
 
-
-
-
 /* --------------------------  Footer ------------------------ */
 
 /* TODO Добавить иконки соц-сетей */
 
 footer {
     background-color: #f5f3f2;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.contact-block {
+    display: grid;
+    grid-template-areas: "title arrow icon-block";
+    grid-template-columns: 15% 10% 1fr;
+    grid-template-rows: 100%;
+    column-gap: 20px;
+    width: 60%;
+    margin: 0 auto;
+    align-items: center;
+    justify-items: center;
+}
+
+.footer-title {
+    grid-area: title;
+    font-family: PlayBold;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #8A8A8A;
+}
+
+.arrow {
+    grid-area: arrow;
+}
+
+.contact-icons {
+    grid-area: icon-block;
+    display: grid;
+    grid-template-areas: "in tg gh email";
+    grid-template-columns: 0.5fr 0.5fr 0.5fr auto;
+    grid-template-rows: 100%;
+    column-gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.in-icon {
+    grid-area: in;
+}
+
+.tg-icon {
+    grid-area: tg;
+}
+
+.github-icon {
+    grid-area: gh;
+}
+
+.email-viber-block {
+    grid-area: email;
+}
+
+.email-viber-block img {
+    margin-right: 5px;
+}
+
+.email-icon {
+    display: grid;
+    grid-template-areas: "icon email";
+    grid-template-columns: 10% auto;
+    grid-template-rows: 100%;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.viber-icon {
+    display: grid;
+    grid-template-areas: "icon viber";
+    grid-template-columns: 10% auto;
+    grid-template-rows: 100%;
+    align-items: center;
+    justify-items: start;
+}
+
+.contact-icons svg:hover path {
+    fill: rgb(241, 112, 87);
 }
