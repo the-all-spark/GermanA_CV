@@ -213,6 +213,16 @@ header {
 
 .contacts ul {
     margin-bottom: 10px;
+    padding-left: 0px;
+    list-style: none;
+}
+
+.contacts a {
+    text-decoration: none;
+}
+
+.contacts a:hover svg path {
+    fill: rgb(241, 112, 87);
 }
 
 /* TODO Добавить иконки соц-сетей */
