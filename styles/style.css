@@ -350,6 +350,21 @@ header {
     margin-top: 0;
 }
 
+/* ------------- Секция "Языки" ------------ */
+
+.eng-lang {
+    margin-top: 10px;
+}
+
+.eng-lang p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.eng-lang ul {
+    list-style-type: disc;
+}
+
 /* ------------- Секция "Хобби" ------------ */
 
 .hobby-list {
@@ -372,6 +387,9 @@ header {
 .hobby-right-list {
     grid-area: hobby-right;
 }
+
+
+
 
 /* --------------------------  Footer ------------------------ */
 
