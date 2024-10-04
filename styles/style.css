@@ -58,11 +58,11 @@ h2 {
 }
 
 a:link {
-    color: rgb(62, 62, 62);
+    color: rgb(100, 44, 18);
 }
 
 a:visited {
-    color:  rgb(130, 88, 82);
+    color:  rgb(168 100 90);
 }
 
 a:hover {
@@ -252,6 +252,7 @@ header {
 
 .exp-line {
     display: grid;
+    grid-template-areas: "current-exp-date current-exp-text";
     grid-template-columns: 20% 1fr;
     grid-template-rows: 100%;
     column-gap: 15px;
@@ -267,7 +268,6 @@ header {
 /* Текущий опыт работы */
 .current-exp {
     grid-area: current-exp;
-    grid-template-areas: "current-exp-date current-exp-text";
 }
 
 .current-exp-date {
@@ -375,14 +375,217 @@ header {
     list-style-type: disc;
 }
 
-/* TODO ------------- Секция "Опыт в области IT" ------------ */
+/* ------------- Секция "Опыт в области IT" ------------ */
 
+.experience-block {
+    display: grid;
+    grid-template-areas: "experience-date experience-text";
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 100%;
+    column-gap: 15px;
+}
 
+.current-experience-block {
+    margin-bottom: 20px;
+}
 
+.experience-date {
+    grid-area: experience-date;
+    text-align: right;
+    font-style: italic;
+    color: rgb(217, 95, 70)
+}
 
+.experience-text {
+    grid-area: experience-text;
+    border-left: 1px solid #929292;
+    padding-left: 15px;
+}
 
+.github-link-block {
+    margin-top: 5px;
+}
 
-/* ------------- Секция "Хобби" ------------ */
+.github-link-block a {
+   text-decoration: none;
+}
+
+.github-link-block a:hover svg path {
+    fill: rgb(241, 112, 87);
+}
+
+/* ---------------- Блок проектов ---------------*/
+
+.project {
+    border-bottom: 1px solid #929292;
+}
+
+.general-block {
+    display: grid;
+    /*grid-template-columns: 45% 53%;*/
+    grid-template-columns: auto 1fr; 
+    grid-template-rows: 100%;
+    column-gap: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.more-block {
+    /*display: none;*/
+    margin-top: 20px;
+}
+
+.project a:hover svg path {
+    fill: rgb(241, 112, 87);
+}
+
+.project a {
+    text-decoration: none;
+}
+
+/* -- Кнопка "Показать подробнее" -- */
+
+.project button {
+    /*display: block;*/
+    display: none;
+    margin-left: auto;
+}
+
+/* --------- To Do List ---------- */
+
+.to-do-list-general {
+    width: 85%;
+    grid-template-areas: "to-do-list-screenshot to-do-list-info";
+}
+
+.to-do-list-screenshot {
+    grid-area: to-do-list-screenshot;
+}
+
+.to-do-list-info {
+    grid-area: to-do-list-info;
+}
+
+/* --- Construct anchor links --- */
+
+.construct-links-general {
+    width: 100%;
+    grid-template-areas: "construct-screenshot construct-info";
+}
+
+.construct-links-screenshot {
+    grid-area: construct-screenshot;
+    border: 1px solid #d4d1d1;
+    padding: 5px 0;
+}
+
+.construct-links-info {
+    grid-area: construct-info;
+}
+
+/* --- Workbook --- */
+
+.workbook-general {
+    width: 100%;
+    grid-template-areas: "workbook-screenshot workbook-info";
+}
+
+.workbook-screenshot {
+    grid-area: workbook-screenshot;
+}
+
+.workbook-info {
+    grid-area: workbook-info;
+}
+
+/* --- Birthdates --- */
+
+.birthdates-general {
+    width: 100%;
+    grid-template-areas: "birthdates-screenshot birthdates-info";
+}
+
+.birthdates-screenshot {
+    grid-area: birthdates-screenshot;
+}
+
+.birthdates-info {
+    grid-area: birthdates-info;
+}
+
+/* --- RP locations --- */
+
+.rp-locations-general {
+    width: 100%;
+    grid-template-areas: "rp-locations-screenshot rp-locations-info";
+}
+
+.rp-locations-screenshot {
+    grid-area: rp-locations-screenshot;
+}
+
+.rp-locations-info {
+    grid-area: rp-locations-info;
+}
+
+.project.rp-locations {
+    border-bottom: 1px solid black;
+}
+
+.collection.project {
+    border-bottom: 1px solid transparent;
+}
+
+/* --- 3d-artkarta --- */
+
+.artkarta-general {
+    width: 100%;
+    grid-template-areas: "artkarta-screenshot artkarta-info";
+}
+
+.artkarta-screenshot {
+    grid-area: artkarta-screenshot;
+}
+
+.artkarta-info {
+    grid-area: artkarta-info;
+}
+
+/* --- Novogrudok --- */
+
+.novogrudok-general {
+    width: 100%;
+    grid-template-areas: "novogrudok-screenshot novogrudok-info";
+}
+
+.novogrudok-screenshot {
+    grid-area: novogrudok-screenshot;
+}
+
+.novogrudok-info {
+    grid-area: novogrudok-info;
+}
+
+/* --- Collection --- */
+
+.collection-general {
+    width: 100%;
+    grid-template-areas: "collection-screenshot collection-info";
+}
+
+.collection-screenshot {
+    grid-area: collection-screenshot;
+}
+
+.collection-info {
+    grid-area: collection-info;
+}
+
+.collection-general {
+    margin-bottom: 0;
+}
+
+/* ------------------- Секция "Хобби" --------------------- */
 
 .hobby-list {
     display: grid;
@@ -406,8 +609,6 @@ header {
 }
 
 /* --------------------------  Footer ------------------------ */
-
-/* TODO Добавить иконки соц-сетей */
 
 footer {
     background-color: #f5f3f2;
