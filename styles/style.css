@@ -431,9 +431,13 @@ header {
 }
 
 .more-block {
-    /*display: none;*/
+    /*display: none;*/ /* ! сделать невидимым для всех блоков */
     margin-top: 20px;
 }
+
+/*.to-do-list-more {
+    display: none;
+}*/
 
 .project a:hover svg path {
     fill: rgb(241, 112, 87);
@@ -443,12 +447,20 @@ header {
     text-decoration: none;
 }
 
-/* -- Кнопка "Показать подробнее" -- */
+/* -- Кнопки "Показать подробнее" и "Скрыть" -- */
 
-.project button {
-    /*display: block;*/
+.show-more-btn {
+    /*display: block;*/ /* ! отобразить для всех блоков*/
     display: none;
     margin-left: auto;
+}
+
+/*.to-do-list .show-more-btn {
+    display: block;
+}*/
+
+.hide-more-btn {
+    display: none; /* ! отобразить в скрытом блоке*/
 }
 
 /* --------- To Do List ---------- */
