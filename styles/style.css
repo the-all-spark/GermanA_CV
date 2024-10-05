@@ -431,7 +431,7 @@ header {
 }
 
 .more-block {
-    /*display: none;*/ /* ! сделать невидимым для всех блоков */
+    display: none; /* ! сделать невидимым для всех блоков */
     margin-top: 20px;
 }
 
@@ -450,17 +450,25 @@ header {
 /* -- Кнопки "Показать подробнее" и "Скрыть" -- */
 
 .show-more-btn {
-    /*display: block;*/ /* ! отобразить для всех блоков*/
-    display: none;
+    display: block; /* ! отобразить для всех блоков*/
     margin-left: auto;
 }
 
-/*.to-do-list .show-more-btn {
-    display: block;
-}*/
-
 .hide-more-btn {
     display: none; /* ! отобразить в скрытом блоке*/
+    margin-left: auto;
+}
+
+#experience button {
+    padding: 4px 8px;
+    border: 1px solid rgb(61, 61, 61);
+}
+ 
+#experience button:hover {
+    cursor: pointer;
+    color:  rgb(168 100 90);
+    border: 1px solid rgb(168 100 90);
+    background-color: #faf8f7;
 }
 
 /* --------- To Do List ---------- */
