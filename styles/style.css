@@ -447,7 +447,12 @@ header {
     text-decoration: none;
 }
 
-/* -- Кнопки "Показать подробнее" и "Скрыть" -- */
+/* -- Кнопки "Показать подробнее", "Показать всё" и "Скрыть" -- */
+
+.switch-displaying-btn {
+    display: block;
+    margin-left: auto;
+}
 
 .show-more-btn {
     display: block; /* ! отобразить для всех блоков*/
