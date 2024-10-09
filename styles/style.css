@@ -25,7 +25,7 @@ html {
 }
 
 body {
-    width: 70%;
+    width: 65%;
     margin: 0 auto;
     font-family: NotoSerifRegular;
     font-size: 15px;
@@ -54,6 +54,10 @@ h2 {
     font-family: PlayBold;
     font-size: 1.3em;
     text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h4 {
     margin-bottom: 10px;
 }
 
@@ -230,12 +234,17 @@ header {
     fill: rgb(241, 112, 87);
 }
 
-/* TODO Добавить иконки соц-сетей */
-
 /* ------------- Секция "О себе" ------------ */
 
-#about-myself ul {
+.education {
     padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#about-myself p {
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 #about-myself li:not(:last-child) {
@@ -252,7 +261,7 @@ header {
                         "cartography-exp";
     grid-template-columns: 100%;
     grid-template-rows: auto;
-    row-gap: 12px;
+    row-gap: 18px;
 }
 
 .exp-line {
@@ -268,6 +277,11 @@ header {
     font-style: italic;
     border-right: 1px solid #929292;
     padding-right: 15px;
+}
+
+.previous-exp ul {
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
 /* Текущий опыт работы */
