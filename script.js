@@ -1,5 +1,23 @@
 window.onload = function() {
 
+    // * ----- Выделение пункта меню при клике на него
+    let menuLinks = document.querySelectorAll(".nav a");
+
+    menuLinks.forEach((link) => {
+        link.addEventListener("click", highlightMenuLink);
+    });
+
+    function highlightMenuLink() {
+
+        for(let i = 0; i < menuLinks.length; i++) {
+            if(menuLinks[i].classList.contains("chosen")) {
+                menuLinks[i].classList.remove("chosen");
+            }
+        }
+        
+        this.classList.add("chosen");
+    }
+
     let moreBtnAll = document.querySelectorAll(".show-more-btn"); // кнопки "Показать подробнее"
     let moreBlocks = document.querySelectorAll(".more-block"); // все скрытые блоки подробнее
 
