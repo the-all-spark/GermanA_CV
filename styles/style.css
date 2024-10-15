@@ -359,12 +359,17 @@ header {
     margin-bottom: 10px;
 }
 
-.hardskills-left-list {
+.hardskills-left-block {
     grid-area: hardskills-left;
 }
 
-.softskills-right-list {
+.softskills-right-block {
     grid-area: softskills-right;
+}
+
+.hardskills-left-list,
+.softskills-right-list {
+    margin-left: 20px;
 }
 
 .graphic-editors {
