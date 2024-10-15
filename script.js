@@ -98,5 +98,18 @@ window.onload = function() {
         document.querySelector('.show-more-btn[data-project = "' + project + '"]').style.display = "flex";
     }
 
+    // * Прокручивание страницы вверх при клике на кнопку вверх (стрелка)
+    let upBtn = document.querySelector(".up-btn");
+
+    upBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        let anchor = document.querySelector(".container");
+        anchor.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+
 
 }
