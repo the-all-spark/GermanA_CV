@@ -399,6 +399,44 @@ header {
     list-style-type: disc;
 }
 
+.language-list {
+    margin-bottom: 10px;
+}
+
+.language-list li {
+   list-style-type: none;
+   margin-bottom: 10px;
+}
+
+.language-list li:first-of-type {
+    margin-bottom: 18px;
+ }
+
+.language-list li::before {
+    content: "";
+    background-image: url("../assets/point.svg");
+    display: inline-block;
+    width: 16px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.english-exp-use-block {
+    margin-left: 40px;
+}
+
+.language-list .english-exp-use li {
+    list-style-type: circle;
+}
+
+.english-exp-use-block p,
+.english-exp-use {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
 /* ------------- Секция "Опыт в области IT" ------------ */
 
 .experience-block {
