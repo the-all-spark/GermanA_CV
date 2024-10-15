@@ -514,8 +514,8 @@ header {
 }
 
 .more-block {
-    display: none; /* ! сделать невидимым для всех блоков */
-    margin-top: 20px;
+    display: none;
+    margin-top: 15px;
 }
 
 /*.to-do-list-more {
