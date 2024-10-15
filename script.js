@@ -52,7 +52,7 @@ window.onload = function() {
             }
 
             for(let i = 0; i < moreBtnAll.length; i++) {
-                moreBtnAll[i].style.display = "block";
+                moreBtnAll[i].style.display = "flex";
             }
 
             this.innerHTML = "Показать всё";
@@ -81,7 +81,7 @@ window.onload = function() {
                 moreBlocks[i].style.display = "block";
 
                 let hideBtn = document.querySelector('.hide-more-btn[data-project = "' + chosenProject + '"]');
-                hideBtn.style.display = "block";
+                hideBtn.style.display = "flex";
                 hideBtn.addEventListener("click", function() { hideMoreInfo(this,chosenProject) });
 
                 this.style.display = "none";
@@ -95,11 +95,8 @@ window.onload = function() {
     function hideMoreInfo(btn,project) {
         btn.style.display = "none";
         document.querySelector('.more-block[data-project = "' + project + '"]').style.display = "none";
-        document.querySelector('.show-more-btn[data-project = "' + project + '"]').style.display = "block";
+        document.querySelector('.show-more-btn[data-project = "' + project + '"]').style.display = "flex";
     }
-
-    // TODO сделать кнопки показать подробнее все (вверху) скрыть подробнее все - внизу (блок Опыт)
-
 
 
 }

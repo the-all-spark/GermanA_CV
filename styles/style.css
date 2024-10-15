@@ -474,13 +474,25 @@ header {
 }
 
 .show-more-btn {
-    display: block; /* ! отобразить для всех блоков*/
+    display: flex; 
+    column-gap: 7px;
+    align-items: center;
     margin-left: auto;
 }
 
+.show-more-btn:hover svg path {
+    fill:  rgb(168 100 90);
+}
+
 .hide-more-btn {
-    display: none; /* ! отобразить в скрытом блоке*/
+    display: flex;
+    column-gap: 7px;
+    align-items: center;
     margin-left: auto;
+}
+
+.hide-more-btn:hover svg path {
+    fill:  rgb(168 100 90);
 }
 
 #experience button {
