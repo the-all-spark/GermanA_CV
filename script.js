@@ -19,9 +19,11 @@ window.onload = function() {
     }
 
     let moreBtnAll = document.querySelectorAll(".show-more-btn"); // кнопки "Показать подробнее"
+    let hideBtnAll = document.querySelectorAll(".hide-more-btn"); // кнопки "Скрыть"
     let moreBlocks = document.querySelectorAll(".more-block"); // все скрытые блоки подробнее
 
     // * ---- Открытие/скрытие всей информации обо всех проектах
+
     let switchBtn = document.querySelector(".switch-displaying-btn"); 
     switchBtn.addEventListener("click", showHideAllInfo);
 
@@ -34,8 +36,14 @@ window.onload = function() {
                 moreBlocks[i].style.display = "block";
             }
 
+            // перебор кнопок "Показать подробнее"
             for(let i = 0; i < moreBtnAll.length; i++) {
                 moreBtnAll[i].style.display = "none";
+            }
+
+            // перебор кнопок "Скрыть"
+            for(let i = 0; i < hideBtnAll.length; i++) {
+                hideBtnAll[i].style.display = "none";
             }
 
             this.innerHTML = "Скрыть всё";
@@ -51,8 +59,14 @@ window.onload = function() {
                 moreBlocks[i].style.display = "none";
             }
 
+            // перебор кнопок "Показать подробнее"
             for(let i = 0; i < moreBtnAll.length; i++) {
                 moreBtnAll[i].style.display = "flex";
+            }
+
+            // перебор кнопок "Скрыть"
+            for(let i = 0; i < hideBtnAll.length; i++) {
+                hideBtnAll[i].style.display = "none";
             }
 
             this.innerHTML = "Показать всё";
