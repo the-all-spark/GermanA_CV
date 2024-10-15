@@ -73,6 +73,27 @@ a:hover {
     color:  rgb(241, 112, 87);
 }
 
+/* -- Кнопка вверх -- */
+
+.up-btn {
+    display: block;
+    position: sticky;
+    bottom: 20px;
+    left: 196px;
+    text-align: right;
+    width: 105%;
+}
+  
+.up-btn:hover {
+    cursor: pointer;
+}
+
+.up-btn:hover svg path {
+    fill: rgb(241, 112, 87);
+}
+  
+
+
 /* --------------------------  Секции - общее ------------------------ */
 
 .section-title {
@@ -685,6 +706,10 @@ header {
 }
 
 /* ------------------- Секция "Хобби" --------------------- */
+
+#hobby {
+    margin: 0 50px 20px;
+}
 
 .hobby-list {
     display: grid;
