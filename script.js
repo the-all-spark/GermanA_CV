@@ -1,22 +1,23 @@
 window.onload = function() {
 
-    // * ----- Выделение пункта меню при клике на него
+    // * ----- Прокручивание страницы до соответствующего пункта меню (при клике на него)
     let menuLinks = document.querySelectorAll(".nav a");
 
     menuLinks.forEach((link) => {
-        link.addEventListener("click", highlightMenuLink);
+        link.addEventListener("click", function(e) { 
+            e.preventDefault();
+
+            let  id = link.getAttribute('href').replace('#', '');
+            //console.log(id);
+            let anchor = document.querySelector(`section[id="${id}"]`);
+            //console.log(anchor);
+
+            anchor.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        } );
     });
-
-    function highlightMenuLink() {
-
-        for(let i = 0; i < menuLinks.length; i++) {
-            if(menuLinks[i].classList.contains("chosen")) {
-                menuLinks[i].classList.remove("chosen");
-            }
-        }
-        
-        this.classList.add("chosen");
-    }
 
     let moreBtnAll = document.querySelectorAll(".show-more-btn"); // кнопки "Показать подробнее"
     let hideBtnAll = document.querySelectorAll(".hide-more-btn"); // кнопки "Скрыть"
@@ -125,5 +126,7 @@ window.onload = function() {
         });
     });
 
+    // TODO Выделение пункта меню при прокручивании страницы до этого пункта
+    
 
 }
