@@ -152,7 +152,8 @@ window.onload = function() {
         // * выделяем последний пункт при прокрутке вниз страницы
         let lastSection = menuLinks[menuLinks.length - 1];
 
-        if (document.body.scrollHeight == Math.ceil(window.scrollY) + document.documentElement.clientHeight) {
+        //if((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) { // альтернатива
+        if (document.body.scrollHeight <= Math.ceil(window.scrollY) + document.documentElement.clientHeight) {
             lastSection.classList.add("chosen-last-item");
         } else {
             if(lastSection.classList.contains("chosen-last-item")) {
