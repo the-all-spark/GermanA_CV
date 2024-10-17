@@ -16,7 +16,23 @@ window.onload = function() {
                 behavior: 'smooth',
                 block: 'start'
             });
-        } );
+
+            /*let lastSectionId = menuLinks[menuLinks.length - 1].getAttribute('href').replace('#', '');
+
+            if( id == lastSectionId ) {
+                console.log("Bottom!");
+
+                for(let i = 0; i < menuLinks.length; i++) {
+                    if(menuLinks[i].classList.contains("chosen")) {
+                        menuLinks[i].classList.remove("chosen");
+                    }
+                    //console.log(menuLinks[menuLinks.length - 1]);
+                    menuLinks[menuLinks.length - 1].classList.add("chosen");
+                }
+
+            }*/
+
+        });
     });
 
     let moreBtnAll = document.querySelectorAll(".show-more-btn"); // кнопки "Показать подробнее"
@@ -113,7 +129,7 @@ window.onload = function() {
         document.querySelector('.show-more-btn[data-project = "' + project + '"]').style.display = "flex";
     }
 
-    // * Прокручивание страницы вверх при клике на кнопку вверх (стрелка)
+    // * ---- Прокручивание страницы вверх при клике на кнопку вверх (стрелка)
     let upBtn = document.querySelector(".up-btn");
 
     upBtn.addEventListener("click", function(e) {
@@ -126,7 +142,45 @@ window.onload = function() {
         });
     });
 
-    // TODO Выделение пункта меню при прокручивании страницы до этого пункта
-    
+    // * ---- Выделение пункта меню при прокручивании страницы до соответствующего блока
+    let sections = document.querySelectorAll("section");
+
+    window.addEventListener('scroll', markMenuItem);
+    function markMenuItem() {
+
+        sections.forEach((section) => {
+            let menuLink = document.querySelector(`.nav a[href="#${section.id}"]`); // соответств. пункт меню
+
+            // * определение смещения с учетом закрепленной шапки
+            let headerMenu = document.querySelector("header"); 
+            let headerHeight = parseFloat(window.getComputedStyle(headerMenu).height); // высота шапки
+            let secTopOffset = section.offsetTop - headerHeight - 25; // с учетом половины значения margin-bottom
+        
+            // * определение высоты элемента с учетом padding, border и margin 
+            let sectionHeight;
+            let styles = window.getComputedStyle(section);
+            let margT = parseFloat(styles['marginTop']); // значение margin-top
+            let margB = parseFloat(styles['marginBottom']); // значение margin -bottom
+
+            if(margT == 0 && margB == 0) {
+                sectionHeight = section.offsetHeight;
+            } else {
+                sectionHeight = section.offsetHeight + margT + margB - 25; // с учетом половины значения margin-bottom
+            }
+
+                //console.log(`Скролл сверху = window.scrollY: ${window.scrollY}`);
+                //console.log(`Смещение секции сверху с уч. шапки = section.offsetTop: ${secTopOffset}`);
+                //console.log(`Высота элемента: ${sectionHeight}`);
+
+            // проверяется что, 1) страница прокручена на значение больше величины смещения элемента,
+            // и 2)  страница прокручена на значение меньше чем величина смещения + высота элемента (элемент виден в окне) 
+            if (window.scrollY >= secTopOffset && window.scrollY < secTopOffset + sectionHeight) {
+                menuLink.classList.add('chosen'); 
+            } else {
+                menuLink.classList.remove('chosen');
+            }
+
+        });
+    }
 
 }
