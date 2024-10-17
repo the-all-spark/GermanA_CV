@@ -92,8 +92,6 @@ a:hover {
     fill: rgb(241, 112, 87);
 }
   
-
-
 /* --------------------------  Секции - общее ------------------------ */
 
 .section-title {
@@ -151,7 +149,8 @@ header {
     background-color: #faf8f7;
 }
 
-.nav .chosen {
+.nav .chosen,
+.nav  .chosen-last-item {
     color:  rgb(241, 112, 87);
     background-color: #faf8f7;
 }

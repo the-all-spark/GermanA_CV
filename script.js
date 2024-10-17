@@ -146,7 +146,19 @@ window.onload = function() {
     let sections = document.querySelectorAll("section");
 
     window.addEventListener('scroll', markMenuItem);
+
     function markMenuItem() {
+
+        // * выделяем последний пункт при прокрутке вниз страницы
+        let lastSection = menuLinks[menuLinks.length - 1];
+
+        if (document.body.scrollHeight == Math.ceil(window.scrollY) + document.documentElement.clientHeight) {
+            lastSection.classList.add("chosen-last-item");
+        } else {
+            if(lastSection.classList.contains("chosen-last-item")) {
+                lastSection.classList.remove("chosen-last-item");
+            }  
+        }
 
         sections.forEach((section) => {
             let menuLink = document.querySelector(`.nav a[href="#${section.id}"]`); // соответств. пункт меню
@@ -175,7 +187,14 @@ window.onload = function() {
             // проверяется что, 1) страница прокручена на значение больше величины смещения элемента,
             // и 2)  страница прокручена на значение меньше чем величина смещения + высота элемента (элемент виден в окне) 
             if (window.scrollY >= secTopOffset && window.scrollY < secTopOffset + sectionHeight) {
-                menuLink.classList.add('chosen'); 
+
+                // проверяем, отмечен ли последний элемент (если да, у текущей ссылки убираем класс)
+                if(lastSection.classList.contains("chosen-last-item")) {
+                    menuLink.classList.remove('chosen'); 
+                } else {
+                    menuLink.classList.add('chosen'); 
+                }
+
             } else {
                 menuLink.classList.remove('chosen');
             }
