@@ -12,8 +12,8 @@
 ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E "JS") 
 
 **Демо:** [Перейти на сайт](https://the-all-spark.github.io/GermanA_CV/)  
-<img src="./assets/site_screenshots/screenshot_main.jpg" width="600" alt='Скриншот раздела "Опыт работы в It"'>
-<img src="./assets/site_screenshots/screenshot_experience.jpg" width="600" alt='Скриншот раздела "Опыт работы в It"'>
+<img src="./assets/site_screenshots/screenshot_main.jpg" alt='Скриншот раздела "Опыт работы в It"'>
+<img src="./assets/site_screenshots/screenshot_experience.jpg" alt='Скриншот раздела "Опыт работы в It"'>
 
 ## Реализованный функционал:
 1. верстка с использованием grid, flex, якорных ссылок в закрепленной навигационной панели, плавной прокрутки и др.;
