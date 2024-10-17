@@ -17,21 +17,6 @@ window.onload = function() {
                 block: 'start'
             });
 
-            /*let lastSectionId = menuLinks[menuLinks.length - 1].getAttribute('href').replace('#', '');
-
-            if( id == lastSectionId ) {
-                console.log("Bottom!");
-
-                for(let i = 0; i < menuLinks.length; i++) {
-                    if(menuLinks[i].classList.contains("chosen")) {
-                        menuLinks[i].classList.remove("chosen");
-                    }
-                    //console.log(menuLinks[menuLinks.length - 1]);
-                    menuLinks[menuLinks.length - 1].classList.add("chosen");
-                }
-
-            }*/
-
         });
     });
 
@@ -39,7 +24,7 @@ window.onload = function() {
     let hideBtnAll = document.querySelectorAll(".hide-more-btn"); // кнопки "Скрыть"
     let moreBlocks = document.querySelectorAll(".more-block"); // все скрытые блоки подробнее
 
-    // * ---- Открытие/скрытие всей информации обо всех проектах
+    // * ---- Открытие/скрытие всей информации обо всех проектах ("Показать всё")
 
     let switchBtn = document.querySelector(".switch-displaying-btn"); 
     switchBtn.addEventListener("click", showHideAllInfo);
@@ -146,13 +131,12 @@ window.onload = function() {
     let sections = document.querySelectorAll("section");
 
     window.addEventListener('scroll', markMenuItem);
-
     function markMenuItem() {
 
         // * выделяем последний пункт при прокрутке вниз страницы
         let lastSection = menuLinks[menuLinks.length - 1];
 
-        //if((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) { // альтернатива
+        //if((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) { // то же самое
         if (document.body.scrollHeight <= Math.ceil(window.scrollY) + document.documentElement.clientHeight) {
             lastSection.classList.add("chosen-last-item");
         } else {
@@ -185,7 +169,7 @@ window.onload = function() {
                 //console.log(`Смещение секции сверху с уч. шапки = section.offsetTop: ${secTopOffset}`);
                 //console.log(`Высота элемента: ${sectionHeight}`);
 
-            // проверяется что, 1) страница прокручена на значение больше величины смещения элемента,
+            // проверяется что, 1) страница прокручена на значение больше или равное величине смещения элемента,
             // и 2)  страница прокручена на значение меньше чем величина смещения + высота элемента (элемент виден в окне) 
             if (window.scrollY >= secTopOffset && window.scrollY < secTopOffset + sectionHeight) {
 

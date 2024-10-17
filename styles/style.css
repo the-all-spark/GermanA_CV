@@ -185,7 +185,7 @@ header {
     display: grid;
     grid-template-areas: "text-block contacts";
     grid-template-columns: 1fr 42%;
-    column-gap: 10px;
+    column-gap: 30px;
     width: 80%;
     margin-left: auto;
     /*border-left: 3px solid rgb(241, 241, 241);*/
@@ -213,45 +213,83 @@ header {
     margin-bottom: 30px;
 }
 
-.contacts {
+/* Контакты, портфолио */
+
+.contacts-portfolio-block {
     grid-area: contacts;
     position: relative;
     align-self: flex-start;
+    display: grid;
+    grid-template-areas: "contact-bl"
+                        "portfolio-bl";
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+    row-gap: 30px;
+}
+
+.contacts-portfolio-block h3 {
+    font-family: PlayBold;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    z-index: 3;
+    margin: 0;
+    background-color: rgb(250, 248, 247);
+}
+
+.contacts-portfolio-block li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.contacts-portfolio-block ul {
+    padding-left: 0px;
+    list-style: none;
+}
+
+.contacts-portfolio-block a {
+    text-decoration: none;
+}
+
+.contacts-portfolio-block a:hover svg path {
+    fill: rgb(241, 112, 87);
+}
+
+.contacts {
+    grid-area: contact-bl;
     border: 3px solid #CAC5C1;
     margin-top: 25px;
     margin-right: 20px;
     padding: 15px;
 }
 
-.contacts h3 {
-    font-family: PlayBold;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    position: absolute;
-    top: -22px;
-    left: 15px;
-    z-index: 3;
-    margin: 0;
-    padding: 10px;
-    background-color: rgb(250, 248, 247);
+.portfolio {
+    grid-area: portfolio-bl;
+    border: 3px solid #CAC5C1;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    padding: 15px;
 }
 
-.contacts li:not(:last-child) {
-    margin-bottom: 10px;
+.contacts h3 {
+    padding: 10px;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+}
+
+.portfolio h3 {
+    padding: 0 10px 10px;
+    position: absolute;
+    bottom: 66px;
+    left: 15px;
 }
 
 .contacts ul {
     margin-bottom: 10px;
-    padding-left: 0px;
-    list-style: none;
 }
 
-.contacts a {
-    text-decoration: none;
-}
-
-.contacts a:hover svg path {
-    fill: rgb(241, 112, 87);
+.portfolio ul {
+    margin-bottom: 0;
+    margin-top: 10px;
 }
 
 /* ------------- Секция "О себе" ------------ */
