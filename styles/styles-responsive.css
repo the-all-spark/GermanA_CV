@@ -1,0 +1,383 @@
+/* --------------- Media Queries ----------------- */
+
+@media screen and (max-width: 1500px) {
+
+    /* Меню и основной блок*/
+    .nav {
+        width: 75%;
+    }
+    .text-block {
+        margin-left: 6.3vw;
+    }
+    .info-block {
+        column-gap: 25px;
+    }
+
+}
+
+@media screen and (max-width: 1380px) { 
+    
+    /* Меню и основной блок*/
+    .nav {
+        width: 80%;
+    }
+    .text-block {
+        margin-left: 7.5vw;
+    }
+    
+
+}
+
+@media screen and (max-width: 1310px) { 
+    
+    /* Меню и основной блок*/
+    .text-block {
+        margin-left: 8.5vw;
+        padding: 20px 0;
+    }
+    .info-block {
+        grid-template-columns: 1fr 45%;
+        column-gap: 15px;
+    }
+    
+
+}
+
+@media screen and (max-width: 1250px) { 
+    
+    /* Меню и основной блок*/
+    .nav {
+        width: 85%;
+    }
+    #main-info {
+        height: 450px;
+    }
+    .info-block {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "text-block"
+                            "contacts";
+        column-gap: 0;
+    }   
+    .photo img {
+        height: 220px;
+    }
+    .text-block {
+        margin-left: 190px;
+        margin-bottom: 15px;
+        position: relative;
+    }
+    .contacts-portfolio-block {
+        grid-area: contacts;
+        grid-template-areas: "contact-bl portfolio-bl";
+        grid-template-rows: 100%;
+        grid-template-columns: auto auto;
+        column-gap: 30px;
+        position: absolute;
+        left: 0;
+        top: 300px;
+        margin-right: 50px;
+        width: 93%;
+        margin-top: 20px;
+    }
+    .contacts-portfolio-block h3 {
+        background-color: white;
+    }
+    .contacts {
+        margin-right: 0;
+    }
+    .contacts ul {
+        display: grid;
+        grid-template-areas: "Li e-mail"
+                            "tg viber";
+        grid-template-rows: 50% 50%;
+        grid-template-columns: auto auto;
+        column-gap: 20px;
+        margin-bottom: 0;
+    }
+    .Li-link {
+        grid-area: Li;
+    }
+    .tg-link {
+        grid-area: tg;
+    }
+    .email-link {
+        grid-area: e-mail;
+    }
+    .viber-link {
+        grid-area: viber;
+    }
+    .portfolio {
+        margin-top: 25px;
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+    .portfolio ul {
+        margin-top: 15px;
+    }
+
+
+}
+
+@media screen and (max-width: 1140px) { 
+    
+    /* Меню и основной блок*/
+    .nav {
+        width: 95%;
+    }
+    .contacts-portfolio-block {
+        column-gap: 20px;
+    }
+    .contacts h3 {
+        padding: 10px 6px 10px;
+        left: 5px;
+    }
+    .portfolio h3 {
+        padding: 0 6px 6px;
+        left: 5px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 1035px) { 
+    
+    /* Меню и основной блок*/
+    #main-info {
+        height: 470px;
+    }
+    .nav {
+        width: 98%;
+    }
+    .text-block {
+        margin-right: 30px;
+    }
+    .contacts {
+        margin-top: 0;
+    }
+    .contacts ul {
+        row-gap: 10px;
+    }
+    .contacts h3 {
+        /*position: static;*/
+        padding: 0 6px 10px;
+        top: -11px;
+    }
+    .portfolio {
+        margin-top: 0;
+    }
+    /*.portfolio h3 {
+        position: static;
+    }*/
+    .contacts-portfolio-block {
+        margin-top: 40px;
+        column-gap: 10px;
+    }
+
+    
+    
+
+
+}
+
+@media screen and (max-width: 1015px) { 
+    
+    /* Меню и основной блок*/
+    #main-info {
+        height: 490px;
+    }
+    .text-block {
+        margin-bottom: 25px;
+        padding: 20px 0 0;
+    }
+    .contacts-portfolio-block {
+        margin-top: 25px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 1000px) { 
+    
+    /* Меню и основной блок*/
+    #main-info {
+        height: 550px;
+    }
+    .nav {
+        width: 90%;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 10px;
+    }
+    .text-block {
+        margin-bottom: 20px;
+        padding: 10px 0 0;
+    }
+    .contacts-portfolio-block {
+        column-gap: 10px;
+        width: 92%;
+        grid-template-areas: "contact-bl"
+                            "portfolio-bl";
+        grid-template-rows: auto auto;
+        grid-template-columns: 100%;
+        left: -25px;
+        margin-right: 0;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .contacts ul {
+        grid-template-rows: auto auto;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+    .contacts h3 {
+        position: absolute;
+        top: -11px;
+    }
+    .portfolio h3 {
+        position: absolute;
+        top: -11px;
+    }
+    .portfolio ul {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 930px) { 
+    
+    /* Меню и основной блок*/
+    #main-info {
+        margin: 0 0 50px 25px;
+        height: 540px; 
+    }
+    .photo {
+        top: 30px;
+        left: -20px;
+    }
+    .text-block {
+        margin-left: 170px;
+    }
+    .contacts-portfolio-block {
+        width: 97%;
+        margin-top: 20px;
+    }
+    
+
+
+}
+
+@media screen and (max-width: 875px) { 
+    
+    /* Меню и основной блок*/
+    #main-info {
+        height: 570px;
+    }
+    .contacts-portfolio-block {
+        margin-top: 40px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 834px) { 
+    
+    /* Меню и основной блок*/
+    .contacts ul {
+        width: 90%;
+    }
+    .portfolio ul {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 824px) { 
+    
+    /* Меню и основной блок*/
+    #main-info {
+        height: 590px;
+    }
+    .contacts-portfolio-block {
+        margin-top: 60px;
+    }
+
+}
+
+@media screen and (max-width: 770px) { 
+    
+    /* Меню и основной блок*/
+    #main-info {
+        height: 580px;
+    }
+    .photo {
+        left: -10px;
+    }
+    .photo img {
+        height: 150px;
+    }
+    .text-block {
+        margin-left: 30px;
+        display: grid;
+        grid-template-areas: "... name"
+                            "... occupation"
+                            "... location"
+                            "job-format job-format";
+        grid-template-columns: 20% auto;
+        column-gap: 20px;
+        margin-bottom: 10px;
+    }
+    .name {
+        grid-area: name;
+        margin-bottom: 10px;
+    }
+    .occupation {
+        grid-area: occupation;
+        margin-bottom: 10px;
+    }
+    .location {
+        grid-area: location;
+    }
+    .job-format {
+        grid-area: job-format;
+        margin-top: 50px;
+    }
+    .contacts-portfolio-block {
+        margin-top: 50px;
+    }
+    .contacts ul {
+        width: 95%;
+    }
+    .portfolio ul {
+        width: 95%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 721px) { 
+    
+    /* Меню и основной блок*/
+    #main-info {
+        height: 590px;
+    }
+    .contacts ul {
+        column-gap: 10px;
+    }
+    .portfolio ul {
+        margin-bottom: 10px;
+    }
+        
+
+}
