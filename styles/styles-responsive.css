@@ -265,6 +265,11 @@
         margin-top: 15px;
     }
 
+    /* "О себе" */
+    .exp-line {
+        grid-template-columns: 25% 1fr;
+    }
+
 
 
 }
@@ -288,6 +293,10 @@
         margin-top: 10px;
     }
     
+    /* Секции - общее */
+    section {
+        margin: 15px 25px 50px;
+    }
 
 
 
@@ -434,6 +443,35 @@
         grid-template-columns: 30% auto;
     }
 
+    /* "О себе" */
+    .exp-line {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        row-gap: 5px;
+    }
+    .exp-date {
+        text-align: left;
+        border-left: 1px solid #929292;
+        border-right: 1px solid transparent;
+        padding-left: 10px;
+    }
+    .current-exp {
+        grid-template-areas: "current-exp-date" 
+                            "current-exp-text";
+    }
+    .lecturer-bsu-exp {
+        grid-template-areas: "lecturer-bsu-exp-date"
+                            "lecturer-bsu-exp-text";
+    }
+    .design-exp {
+        grid-template-areas: "design-exp-date" 
+                            "design-exp-text";
+    }
+    .cartography-exp {
+        grid-template-areas: "cartography-exp-date" 
+                            "cartography-exp-text";
+    }
+
 
 
 
@@ -513,7 +551,10 @@
         margin-top: 100px;
     }
 
-    
+    /* "О себе" */
+    .education {
+        padding-left: 30px;
+    }
 
 }
 
@@ -544,7 +585,10 @@
         margin-top: 110px;
     }
 
-
+    /* "О себе" */
+    .education {
+        padding-left: 20px;
+    }
 
 
 }
