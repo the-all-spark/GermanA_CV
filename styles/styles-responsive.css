@@ -13,6 +13,9 @@
         column-gap: 25px;
     }
 
+
+
+
 }
 
 @media screen and (max-width: 1380px) { 
@@ -25,6 +28,8 @@
         margin-left: 7.5vw;
     }
     
+
+
 
 }
 
@@ -41,10 +46,15 @@
     }
     
 
+
+
 }
 
 @media screen and (max-width: 1250px) { 
-    
+    body {
+        width: 70%;
+    }
+
     /* Меню и основной блок*/
     .nav {
         width: 85%;
@@ -67,6 +77,7 @@
         margin-left: 190px;
         margin-bottom: 15px;
         position: relative;
+        margin-right: 30px;
     }
     .contacts-portfolio-block {
         grid-area: contacts;
@@ -118,13 +129,18 @@
     }
 
 
+
+
 }
 
 @media screen and (max-width: 1140px) { 
-    
+    body {
+        width: 75%;
+    }
+
     /* Меню и основной блок*/
     .nav {
-        width: 95%;
+        width: 90%;
     }
     .contacts-portfolio-block {
         column-gap: 20px;
@@ -186,7 +202,7 @@
     
     /* Меню и основной блок*/
     #main-info {
-        height: 490px;
+        height: 460px;
     }
     .text-block {
         margin-bottom: 25px;
@@ -269,22 +285,9 @@
     }
     .contacts-portfolio-block {
         width: 97%;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     
-
-
-}
-
-@media screen and (max-width: 875px) { 
-    
-    /* Меню и основной блок*/
-    #main-info {
-        height: 570px;
-    }
-    .contacts-portfolio-block {
-        margin-top: 40px;
-    }
 
 
 
@@ -300,17 +303,29 @@
         width: 90%;
     }
 
+
+
+
 }
 
 @media screen and (max-width: 824px) { 
-    
+    body {
+        width: 80%;
+    }
+
     /* Меню и основной блок*/
     #main-info {
-        height: 590px;
+        height: 550px;
+    }
+    .text-block {
+        margin-bottom: 35px;
     }
     .contacts-portfolio-block {
-        margin-top: 60px;
+        margin-top: 20px;
     }
+
+
+
 
 }
 
@@ -363,6 +378,8 @@
     }
 
 
+
+
 }
 
 
@@ -373,11 +390,198 @@
         height: 590px;
     }
     .contacts ul {
-        column-gap: 10px;
+        column-gap: 10px; 
+        width: 100%;
     }
     .portfolio ul {
         margin-bottom: 10px;
     }
-        
+
 
 }
+
+@media screen and (max-width: 674px) { 
+    body {
+        width: 85%;
+    }
+
+    /* Меню и основной блок*/
+    #main-info {
+        height: 580px;
+    }
+    .text-block {
+        column-gap: 30px;
+    }
+    .job-format {
+        margin-top: 50px;
+    }
+    .contacts-portfolio-block {
+        row-gap: 20px;
+        margin-top: 50px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 640px) { 
+    
+    /* Меню и основной блок*/
+    .info-block {
+        width: 95%;
+    }
+    .text-block {
+        grid-template-columns: 30% auto;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 558px) { 
+    
+    /* Меню и основной блок*/
+    #main-info {
+        height: 640px;
+    }
+    .job-format {
+        margin-top: 30px;
+    }
+    .contacts {
+        padding: 15px 25px 20px;
+    }
+    .contacts ul {
+        grid-template-areas: "Li"
+                             "tg"
+                             "e-mail"
+                             "viber";
+        grid-template-rows: auto;
+        grid-template-columns: 100%;
+        row-gap: 5px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 480px) { 
+    body {
+        width: 90%;
+    }
+
+    /* Меню и основной блок*/
+    .info-block {
+        width: 100%;
+    }
+    .photo {
+        left: -20px;
+    }
+    .text-block {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .contacts-portfolio-block {
+        margin-top: 60px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 430px) { 
+
+    /* Меню и основной блок*/
+    #main-info {
+        height: 690px;
+    }
+    .text-block {
+        margin-left: 30px;
+        grid-template-areas: "... name"
+                            "... occupation"
+                            "location location"
+                            "job-format job-format";
+        grid-template-columns: 35% auto;
+    }
+    .location {
+        margin-top: 50px;
+    }
+    .job-format {
+        margin-top: 0;
+    }
+    .contacts-portfolio-block {
+        margin-top: 100px;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 400px) { 
+
+    /* Меню и основной блок*/
+    .text-block {
+        margin-left: 20px;
+    }
+    .contacts {
+        padding: 15px 15px 20px;
+    }
+
+
+
+}
+
+@media screen and (max-width: 370px) { 
+
+    /* Меню и основной блок*/
+    #main-info {
+        height: 720px;
+    }
+    .text-block {
+        grid-template-columns: 40% auto;
+    }
+    .contacts-portfolio-block {
+        margin-top: 110px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 335px) { 
+
+    /* Меню и основной блок*/
+    #main-info {
+        height: 740px;
+    }
+    .contacts-portfolio-block {
+        margin-left: 15px;
+    }
+    .contacts-portfolio-block {
+        margin-top: 130px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width: 320px) { 
+
+    /* Меню и основной блок*/
+    .photo img {
+        height: 130px;
+    }
+    .location {
+        margin-top: 30px;
+    }
+    .email-link span {
+        font-size: 13px;
+    }
+
+
+
+
+}
+
