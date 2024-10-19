@@ -326,7 +326,6 @@ header {
 
 .exp-line {
     display: grid;
-    grid-template-areas: "current-exp-date current-exp-text";
     grid-template-columns: 20% 1fr;
     grid-template-rows: 100%;
     column-gap: 15px;
@@ -347,6 +346,7 @@ header {
 /* Текущий опыт работы */
 .current-exp {
     grid-area: current-exp;
+    grid-template-areas: "current-exp-date current-exp-text";
 }
 
 .current-exp-date {
