@@ -838,7 +838,7 @@ footer {
     grid-template-columns: 15% 10% 1fr;
     grid-template-rows: 100%;
     column-gap: 20px;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     align-items: center;
     justify-items: center;
