@@ -1,5 +1,50 @@
 /* --------------- Media Queries ----------------- */
 
+@media (hover: hover) {
+    
+    /* Реакции на наведение курсора*/
+    a:hover {
+        color:  rgb(241, 112, 87);
+    }
+    .up-btn:hover {
+        cursor: pointer;
+    }
+    .up-btn:hover svg path {
+        fill: rgb(241, 112, 87);
+    }
+    .nav a:hover {
+        border: 1px solid rgb(241, 112, 87);
+        background-color: #faf8f7;
+    }
+    .contacts-portfolio-block a:hover svg path {
+        fill: rgb(241, 112, 87);
+    }
+    .github-link-block a:hover svg path {
+        fill: rgb(241, 112, 87);
+    }
+    .project a:hover svg path {
+        fill: rgb(241, 112, 87);
+    }
+    .show-more-btn:hover svg path {
+        fill:  rgb(168 100 90);
+    }
+    .hide-more-btn:hover svg path {
+        fill:  rgb(168 100 90);
+    }
+    #experience button:hover {
+        cursor: pointer;
+        color:  rgb(168 100 90);
+        border: 1px solid rgb(168 100 90);
+        background-color: #faf8f7;
+    }
+    .contact-icons svg:hover path {
+        fill: rgb(241, 112, 87);
+    }
+
+
+}
+
+
 @media screen and (max-width: 1500px) {
 
     /* Меню и основной блок*/
