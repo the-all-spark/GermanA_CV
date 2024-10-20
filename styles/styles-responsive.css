@@ -819,6 +819,11 @@
         padding-left: 30px;
     }
 
+    /* "Опыт в области IT" */
+    button {
+        font-size: 14px;
+    }
+
 }
 
 @media screen and (max-width: 400px) { 
