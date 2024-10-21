@@ -177,6 +177,12 @@ header {
     text-align: center;
 }
 
+.burger-menu-nav .chosen,
+.burger-menu-nav .chosen-last-item {
+    color: rgb(241, 112, 87);
+    background-color: #faf8f7;
+}
+
 .burgermenu-btn-open {
     text-align: right;
 }

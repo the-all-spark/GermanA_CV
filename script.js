@@ -1,7 +1,24 @@
 window.onload = function() {
 
-    // * ----- Прокручивание страницы до соответствующего пункта меню (при клике на него)
-    let menuLinks = document.querySelectorAll(".nav a");
+    // * ----- Прокручивание страницы до соответствующего пункта основного и бургер-меню (при клике на него)
+
+    let desktopMenu = document.querySelector(".nav");
+    let displayedStyle = getComputedStyle(desktopMenu).display;
+    //console.log(displayedStyle);
+
+    let menuLinks;
+
+    if(displayedStyle === "none") { 
+        // отображается бургер меню 
+        menuLinks = document.querySelectorAll(".burger-menu-nav a");
+        console.log("Бургер-меню");
+        console.log(menuLinks);
+    } else {
+        // отображается основное меню 
+        menuLinks = document.querySelectorAll(".nav a");
+        console.log("Основное меню");
+        console.log(menuLinks);
+    }
 
     menuLinks.forEach((link) => {
         link.addEventListener("click", function(e) { 
@@ -20,11 +37,83 @@ window.onload = function() {
         });
     });
 
+    // * ---- Выделение пункта меню при прокручивании страницы до соответствующего блока
+    let sections = document.querySelectorAll("section");
+
+    window.addEventListener('scroll', markMenuItem);
+    function markMenuItem() {
+
+        // * выделяем последний пункт при прокрутке вниз страницы
+        let lastSection = menuLinks[menuLinks.length - 1];
+
+        //if((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) { // то же самое
+        if (document.body.scrollHeight <= Math.ceil(window.scrollY) + document.documentElement.clientHeight) {
+            lastSection.classList.add("chosen-last-item");
+        } else {
+            if(lastSection.classList.contains("chosen-last-item")) {
+                lastSection.classList.remove("chosen-last-item");
+            }  
+        }
+
+        sections.forEach((section) => {
+
+            let menuLink;  // соответствующий пункт меню
+            let secTopOffset; // смещение с учетом/без учета шапки
+
+            if(displayedStyle === "none") { 
+                // для бургер меню 
+                menuLink = document.querySelector(`.burger-menu-nav a[href="#${section.id}"]`); 
+                secTopOffset = section.offsetTop - 80;
+
+            } else {
+                // для основного меню 
+                menuLink = document.querySelector(`.nav a[href="#${section.id}"]`);
+            
+                // * определение смещения с учетом закрепленной шапки
+                let headerMenu = document.querySelector("header"); 
+                let headerHeight = parseFloat(window.getComputedStyle(headerMenu).height); // высота шапки
+                secTopOffset = section.offsetTop - headerHeight - 25; // с учетом половины значения margin-bottom
+            }
+        
+            // * определение высоты элемента с учетом padding, border и margin 
+            let sectionHeight;
+            let styles = window.getComputedStyle(section);
+            let margT = parseFloat(styles['marginTop']); // значение margin-top
+            let margB = parseFloat(styles['marginBottom']); // значение margin -bottom
+
+            if(margT == 0 && margB == 0) {
+                sectionHeight = section.offsetHeight;
+            } else {
+                sectionHeight = section.offsetHeight + margT + margB - 25; // с учетом половины значения margin-bottom
+            }
+
+                //console.log(`Скролл сверху = window.scrollY: ${window.scrollY}`);
+                //console.log(`Смещение секции сверху с уч. шапки = section.offsetTop: ${secTopOffset}`);
+                //console.log(`Высота элемента: ${sectionHeight}`);
+
+            // проверяется что, 1) страница прокручена на значение больше или равное величине смещения элемента,
+            // и 2)  страница прокручена на значение меньше чем величина смещения + высота элемента (элемент виден в окне) 
+            if (window.scrollY >= secTopOffset && window.scrollY < secTopOffset + sectionHeight) {
+
+                // проверяем, отмечен ли последний элемент (если да, у текущей ссылки убираем класс)
+                if(lastSection.classList.contains("chosen-last-item")) {
+                    menuLink.classList.remove('chosen'); 
+                } else {
+                    menuLink.classList.add('chosen'); 
+                }
+
+            } else {
+                menuLink.classList.remove('chosen');
+            }
+
+        });
+    }
+
+    // * ---- Открытие/скрытие всей информации обо всех проектах ("Показать всё")
+
     let moreBtnAll = document.querySelectorAll(".show-more-btn"); // кнопки "Показать подробнее"
     let hideBtnAll = document.querySelectorAll(".hide-more-btn"); // кнопки "Скрыть"
     let moreBlocks = document.querySelectorAll(".more-block"); // все скрытые блоки подробнее
-
-    // * ---- Открытие/скрытие всей информации обо всех проектах ("Показать всё")
 
     let switchBtn = document.querySelector(".switch-displaying-btn"); 
     switchBtn.addEventListener("click", showHideAllInfo);
@@ -126,65 +215,5 @@ window.onload = function() {
             block: 'start'
         });
     });
-
-    // * ---- Выделение пункта меню при прокручивании страницы до соответствующего блока
-    let sections = document.querySelectorAll("section");
-
-    window.addEventListener('scroll', markMenuItem);
-    function markMenuItem() {
-
-        // * выделяем последний пункт при прокрутке вниз страницы
-        let lastSection = menuLinks[menuLinks.length - 1];
-
-        //if((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) { // то же самое
-        if (document.body.scrollHeight <= Math.ceil(window.scrollY) + document.documentElement.clientHeight) {
-            lastSection.classList.add("chosen-last-item");
-        } else {
-            if(lastSection.classList.contains("chosen-last-item")) {
-                lastSection.classList.remove("chosen-last-item");
-            }  
-        }
-
-        sections.forEach((section) => {
-            let menuLink = document.querySelector(`.nav a[href="#${section.id}"]`); // соответств. пункт меню
-
-            // * определение смещения с учетом закрепленной шапки
-            let headerMenu = document.querySelector("header"); 
-            let headerHeight = parseFloat(window.getComputedStyle(headerMenu).height); // высота шапки
-            let secTopOffset = section.offsetTop - headerHeight - 25; // с учетом половины значения margin-bottom
-        
-            // * определение высоты элемента с учетом padding, border и margin 
-            let sectionHeight;
-            let styles = window.getComputedStyle(section);
-            let margT = parseFloat(styles['marginTop']); // значение margin-top
-            let margB = parseFloat(styles['marginBottom']); // значение margin -bottom
-
-            if(margT == 0 && margB == 0) {
-                sectionHeight = section.offsetHeight;
-            } else {
-                sectionHeight = section.offsetHeight + margT + margB - 25; // с учетом половины значения margin-bottom
-            }
-
-                //console.log(`Скролл сверху = window.scrollY: ${window.scrollY}`);
-                //console.log(`Смещение секции сверху с уч. шапки = section.offsetTop: ${secTopOffset}`);
-                //console.log(`Высота элемента: ${sectionHeight}`);
-
-            // проверяется что, 1) страница прокручена на значение больше или равное величине смещения элемента,
-            // и 2)  страница прокручена на значение меньше чем величина смещения + высота элемента (элемент виден в окне) 
-            if (window.scrollY >= secTopOffset && window.scrollY < secTopOffset + sectionHeight) {
-
-                // проверяем, отмечен ли последний элемент (если да, у текущей ссылки убираем класс)
-                if(lastSection.classList.contains("chosen-last-item")) {
-                    menuLink.classList.remove('chosen'); 
-                } else {
-                    menuLink.classList.add('chosen'); 
-                }
-
-            } else {
-                menuLink.classList.remove('chosen');
-            }
-
-        });
-    }
 
 }
