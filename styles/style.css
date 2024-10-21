@@ -63,15 +63,16 @@ h4 {
 
 a {
     -webkit-tap-highlight-color: transparent;
+    color: rgb(100, 44, 18);
 }
 
 a:link {
     color: rgb(100, 44, 18);
 }
 
-a:visited {
+/*a:visited {
     color:  rgb(168 100 90);
-}
+}*/
 
 /* -- Кнопка вверх -- */
 
