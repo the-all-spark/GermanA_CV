@@ -763,8 +763,11 @@
     #main-info {
         height: 640px;
     }
+    .text-block {
+        column-gap: 20px;
+    }
     .job-format {
-        margin-top: 30px;
+        margin-top: 35px;
     }
     .contacts {
         padding: 15px 25px 20px;
@@ -836,26 +839,23 @@
 @media screen and (max-width: 430px) { 
 
     /* Меню и основной блок*/
-    #main-info {
-        height: 690px;
-    }
     .text-block {
         margin-left: 30px;
         grid-template-areas: 
             "... name"
             "... occupation"
-            "location location"
+            "... location"
             "job-format job-format";
         grid-template-columns: 35% auto;
     }
-    .location {
-        margin-top: 50px;
+    .name {
+        margin-top: 35px;
     }
     .job-format {
-        margin-top: 0;
+        margin-top: 15px;
     }
     .contacts-portfolio-block {
-        margin-top: 100px;
+        margin-top: 70px;
     }
 
     /* "О себе" */
@@ -870,14 +870,51 @@
 
 }
 
+@media screen and (max-width: 408px) { 
+
+    /* Меню и основной блок*/
+    #main-info {
+        height: 670px;
+    }
+    .text-block {
+        grid-template-areas:
+            "... name"
+            "... occupation"
+            "location location"
+            "job-format job-format";
+    }
+    .contacts-portfolio-block {
+        margin-top: 80px;
+    }
+
+}
+
 @media screen and (max-width: 400px) { 
 
     /* Меню и основной блок*/
     .text-block {
-        margin-left: 20px;
+        margin-left: 22px;
+    }
+    .location {
+        margin-top: 40px;
+    }
+    .job-format {
+        margin-top: 0;
+    }
+    .contacts-portfolio-block {
+        margin-top: 80px;
     }
     .contacts {
         padding: 15px 15px 20px;
+    }
+
+}
+
+@media screen and (max-width: 390px) { 
+
+    /* Меню и основной блок*/
+    .location {
+        margin-top: 20px;
     }
 
 }
@@ -928,13 +965,16 @@
 
     /* Меню и основной блок*/
     #main-info {
-        height: 740px;
+        height: 720px;
+    }
+    .text-block {
+        column-gap: 25px;
     }
     .contacts-portfolio-block {
         margin-left: 15px;
     }
     .contacts-portfolio-block {
-        margin-top: 130px;
+        margin-top: 110px;
     }
 
 }
@@ -944,6 +984,9 @@
     /* Меню и основной блок*/
     .photo img {
         height: 130px;
+    }
+    .text-block {
+        column-gap: 15px;
     }
     .location {
         margin-top: 30px;
