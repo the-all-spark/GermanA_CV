@@ -110,8 +110,8 @@ window.onload = function() {
     }
 
     // * ---- Открытие / закрытие бургер-меню
-    let bmOpenBtn = document.querySelector(".burgermenu-btn-open");
-    let bmCloseBtn = document.querySelector(".burgermenu-btn-close");
+    let bmOpenBtn = document.querySelector(".burgermenu-btn-open img");
+    let bmCloseBtn = document.querySelector(".burgermenu-btn-close img");
 
     bmOpenBtn.addEventListener("click", showHideMenu);
 
@@ -122,20 +122,38 @@ window.onload = function() {
         if(bm.classList.contains("show-burger-menu")) {
             // Закрыть меню
             bm.classList.remove("show-burger-menu");
-            bmOpenBtn.style.display = "block";
-            bmCloseBtn.style.display = "none";
+            bmOpenBtn.parentElement.style.display = "block";
+            bmCloseBtn.parentElement.style.display = "none";
 
             bmOpenBtn.addEventListener("click", showHideMenu)
 
         } else {
             // Открыть меню
             bm.classList.add("show-burger-menu");
-            bmOpenBtn.style.display = "none";
-            bmCloseBtn.style.display = "block";
+            bmOpenBtn.parentElement.style.display = "none";
+            bmCloseBtn.parentElement.style.display = "block";
 
             bmCloseBtn.addEventListener("click", showHideMenu);
         }
 
+        // Скрытие меню, когда пользователь кликает в любом месте страницы
+        document.addEventListener('click', hideMenu);
+    }
+
+    // * функция скрытия меню при клике вне его
+    function hideMenu(e) {
+        let bmBlock = document.querySelector(".burger-menu-block"); 
+
+        // есть ли внутри того, по чему кликнули, бургер-меню и кнопка
+        let clickTarget = bmBlock.contains(e.target); // false - если клик вне кнопки и блока 
+        //console.log(e.target); // объект клика
+        
+        // Если нет, то прячем меню
+        if (!clickTarget) {
+            document.querySelector(".burger-menu-nav").classList.remove("show-burger-menu");
+            bmOpenBtn.parentElement.style.display = "block";
+            bmCloseBtn.parentElement.style.display = "none";
+        }	
     }
 
     // * ---- Открытие/скрытие всей информации обо всех проектах ("Показать всё")
