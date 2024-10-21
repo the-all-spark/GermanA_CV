@@ -153,7 +153,7 @@ header {
 }
 
 .burger-menu-nav {
-    display: flex;
+    display: none;
     flex-direction: column;
     row-gap: 10px;
     padding-right: 20px;
@@ -162,19 +162,23 @@ header {
     margin-bottom: 20px;
 }
 
+.show-burger-menu {
+    display: flex;
+}
+
 .burger-menu-nav li {
     display: inline-block;
     list-style-type: none;
 }
 
 .burger-menu-nav a {
-    text-decoration: none;
+    display: inline-block;
+    width: 140px;
+    text-align: center;
     border: 1px solid rgb(126 126 126);
     padding: 5px 12px;
     border-radius: 2px;
-    width: 140px;
-    display: inline-block;
-    text-align: center;
+    text-decoration: none;
 }
 
 .burger-menu-nav .chosen,
@@ -184,17 +188,19 @@ header {
 }
 
 .burgermenu-btn-open {
+    display: block;
     text-align: right;
-}
-
-.burgermenu-btn-open img {
-    padding: 10px;
 }
 
 .burgermenu-btn-close {
     display: none;
+    text-align: right;
 }
 
+.burgermenu-btn-open img,
+.burgermenu-btn-close img {
+    padding: 10px;
+}
 
 /* ------------- Секция "Основное" ------------ */
 

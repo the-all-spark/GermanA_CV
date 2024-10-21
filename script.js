@@ -109,6 +109,35 @@ window.onload = function() {
         });
     }
 
+    // * ---- Открытие / закрытие бургер-меню
+    let bmOpenBtn = document.querySelector(".burgermenu-btn-open");
+    let bmCloseBtn = document.querySelector(".burgermenu-btn-close");
+
+    bmOpenBtn.addEventListener("click", showHideMenu);
+
+    // * функция переключения между показать / скрыть бургер-меню
+    function showHideMenu() {
+        let bm = document.querySelector(".burger-menu-nav");
+
+        if(bm.classList.contains("show-burger-menu")) {
+            // Закрыть меню
+            bm.classList.remove("show-burger-menu");
+            bmOpenBtn.style.display = "block";
+            bmCloseBtn.style.display = "none";
+
+            bmOpenBtn.addEventListener("click", showHideMenu)
+
+        } else {
+            // Открыть меню
+            bm.classList.add("show-burger-menu");
+            bmOpenBtn.style.display = "none";
+            bmCloseBtn.style.display = "block";
+
+            bmCloseBtn.addEventListener("click", showHideMenu);
+        }
+
+    }
+
     // * ---- Открытие/скрытие всей информации обо всех проектах ("Показать всё")
 
     let moreBtnAll = document.querySelectorAll(".show-more-btn"); // кнопки "Показать подробнее"
