@@ -143,6 +143,53 @@ header {
     background-color: #faf8f7;
 }
 
+/* --------- Бургер-меню (для ширины 1000 px b и больше) --------- */
+
+.burger-menu-block {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #efeceb;
+}
+
+.burger-menu-nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-right: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.burger-menu-nav li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.burger-menu-nav a {
+    text-decoration: none;
+    border: 1px solid rgb(126 126 126);
+    padding: 5px 12px;
+    border-radius: 2px;
+    width: 140px;
+    display: inline-block;
+    text-align: center;
+}
+
+.burgermenu-btn-open {
+    text-align: right;
+}
+
+.burgermenu-btn-open img {
+    padding: 10px;
+}
+
+.burgermenu-btn-close {
+    display: none;
+}
+
+
 /* ------------- Секция "Основное" ------------ */
 
 #main-info {

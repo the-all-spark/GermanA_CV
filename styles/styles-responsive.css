@@ -341,14 +341,13 @@
         height: 550px;
     }
     .nav {
-        width: 90%;
-        justify-content: center;
-        flex-wrap: wrap;
-        row-gap: 20px;
-        column-gap: 10px;
+        display: none;
+    }
+    .burger-menu-block {
+        display: block;
     }
     .text-block {
-        margin-bottom: 20px;
+        margin-bottom: 35px;
         padding: 10px 0 0;
     }
     .contacts-portfolio-block {
