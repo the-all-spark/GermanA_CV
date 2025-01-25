@@ -47,7 +47,8 @@ window.onload = function() {
         let lastSection = menuLinks[menuLinks.length - 1];
 
         //if((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) { // то же самое
-        if (document.body.scrollHeight <= Math.ceil(window.scrollY) + document.documentElement.clientHeight) {
+        //if ((Math.round(window.scrollY) + document.documentElement.clientHeight) >= document.body.scrollHeight) {
+        if (document.body.scrollHeight <= Math.ceil(window.scrollY) + document.documentElement.clientHeight ) {    
             lastSection.classList.add("chosen-last-item");
         } else {
             if(lastSection.classList.contains("chosen-last-item")) {

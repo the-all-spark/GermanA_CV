@@ -97,7 +97,6 @@ a:link {
 section {
     margin: 15px 50px 50px;
     scroll-margin-top: 75px;
-    /*text-align: justify;*/
 }
 
 ul {
@@ -108,7 +107,6 @@ ul {
 /* -------------------  Навигация, header ------------------- */
 
 header {
-    /*background-color: rgb(245 245 245);*/
     background-color: #efeceb;
     position: sticky;
     top: 0;
@@ -206,19 +204,13 @@ header {
 /* ------------- Секция "Основное" ------------ */
 
 #main-info {
-    /*display: grid;
-    grid-template-areas: "photo info contacts";
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-    column-gap: 10px;*/
     position: relative;
     margin: 0 0 50px 50px;
-    /*margin-top: 20px;*/
 }
 
 .photo {
     position: absolute;
     top: 35px;
-    /*grid-area: photo;*/
     display: inline-block;
     padding: 3px 3px 0;
     border: 3px solid #CAC5C1;
@@ -236,7 +228,6 @@ header {
     column-gap: 30px;
     width: 80%;
     margin-left: auto;
-    /*border-left: 3px solid rgb(241, 241, 241);*/
     border-left: 3px solid #CAC5C1;
     border-bottom: 3px solid #CAC5C1;
     background-color: #faf8f7;
@@ -540,8 +531,6 @@ header {
     margin-bottom: 5px;
 }
 
-
-
 /* ------------- Секция "Опыт в области IT" ------------ */
 
 .experience-block {
@@ -586,7 +575,6 @@ header {
 
 .general-block {
     display: grid;
-    /*grid-template-columns: 45% 53%;*/
     grid-template-columns: auto 1fr; 
     column-gap: 30px;
     margin-bottom: 30px;
@@ -595,7 +583,7 @@ header {
 
 .more-block {
     display: none;
-    /*margin-top: 15px;*/
+    margin-top: 10px;
 }
 
 .project a {
@@ -626,6 +614,9 @@ header {
 #experience button {
     padding: 4px 8px;
     border: 1px solid rgb(61, 61, 61);
+    margin-top: 10px;
+    width: 200px;
+    justify-content: center;
 }
 
 /* --------- To Do List ---------- */
@@ -683,9 +674,10 @@ header {
 
 .workbook-general {
     width: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: "workbook-screenshot workbook-main-info-block"
-                         "... workbook-more-info-block";
+    grid-template-rows: 150px auto;
+    grid-template-areas:
+        "workbook-screenshot workbook-main-info-block"
+        "workbook-screenshot workbook-more-info-block";
 }
 
 .workbook-screenshot {
@@ -705,8 +697,9 @@ header {
 .birthdates-general {
     width: 100%;
     grid-template-rows: auto auto;
-    grid-template-areas: "birthdates-screenshot birthdates-main-info-block"
-                         "birthdates-more-info-block birthdates-more-info-block";
+    grid-template-areas: 
+        "birthdates-screenshot birthdates-main-info-block"
+        "birthdates-more-info-block birthdates-more-info-block";
 }
 
 .birthdates-screenshot {
@@ -726,8 +719,9 @@ header {
 .rp-locations-general {
     width: 100%;
     grid-template-rows: auto auto;
-    grid-template-areas: "rp-locations-screenshot rp-locations-main-info-block"
-                         "rp-locations-more-info-block rp-locations-more-info-block";
+    grid-template-areas: 
+        "rp-locations-screenshot rp-locations-main-info-block"
+        "rp-locations-more-info-block rp-locations-more-info-block";
 }
 
 .rp-locations-screenshot {
@@ -746,13 +740,42 @@ header {
     border-bottom: 1px solid black;
 }
 
+/* --- Get Coordinates App --- */
+
+.get-coordinates-general {
+    width: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "get-coordinates-screenshot get-coordinates-main-info-block"
+        "get-coordinates-more-info-block get-coordinates-more-info-block";
+}
+
+.get-coordinates-screenshot {
+    grid-area: get-coordinates-screenshot;
+}
+
+.get-coordinates-main-info-block {
+    grid-area: get-coordinates-main-info-block;
+}
+
+.get-coordinates-more-info-block {
+    grid-area: get-coordinates-more-info-block;
+}
+
+li ul {
+    list-style-type: disc;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
 /* --- 3d-artkarta --- */
 
 .artkarta-general {
     width: 100%;
     grid-template-rows: auto auto;
-    grid-template-areas: "artkarta-screenshot artkarta-main-info-block"
-                         "artkarta-more-info-block artkarta-more-info-block";
+    grid-template-areas: 
+        "artkarta-screenshot artkarta-main-info-block"
+        "artkarta-more-info-block artkarta-more-info-block";
 }
 
 .artkarta-screenshot {
@@ -772,8 +795,9 @@ header {
 .novogrudok-general {
     width: 100%;
     grid-template-rows: auto;
-    grid-template-areas: "novogrudok-screenshot novogrudok-main-info-block"
-                         "novogrudok-more-info-block novogrudok-more-info-block";
+    grid-template-areas: 
+        "novogrudok-screenshot novogrudok-main-info-block"
+        "novogrudok-more-info-block novogrudok-more-info-block";
 }
 
 .novogrudok-screenshot {
@@ -794,8 +818,9 @@ header {
     width: 100%;
     margin-bottom: 0;
     grid-template-rows: auto auto;
-    grid-template-areas: "collection-screenshot collection-main-info-block"
-                         "collection-more-info-block collection-more-info-block";
+    grid-template-areas: 
+        "collection-screenshot collection-main-info-block"
+        "collection-more-info-block collection-more-info-block";
 }
 
 .collection-screenshot {
